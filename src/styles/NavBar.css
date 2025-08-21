@@ -1,0 +1,201 @@
+/* 
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  padding: 6px 20px;
+  background: #f7e2b4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  box-shadow: 2px 2px 5px rgba(251, 255, 0, 0.575);
+  z-index: 1000;
+}
+
+.navbar .logo img {
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 20px;
+}
+
+.navbar .logo img:hover {
+  transform: scale(1.05);
+}
+
+.navbar .links ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
+
+.navbar .links ul li {
+  position: relative;
+}
+
+.navbar .links ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar .links ul li a:hover {
+  color: #ff4d4f;
+}
+
+.navbar .links ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #ff4d4f;
+  transition: width 0.3s ease;
+}
+
+.navbar .links ul li a:hover::after {
+  width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    border-radius: 30px;
+    margin: 20px;
+    background-color: #ff4d4f;
+  }
+
+  .navbar .links ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+  }
+} */
+
+/* الأساس */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* توزيع أفضل */
+  height: 60px;
+  padding: 8px 16px;
+  background: #f7e2b4;
+  box-shadow: 2px 2px 5px rgba(251, 255, 0, 0.575);
+  z-index: 1000;
+}
+
+.logo img {
+  width: 110px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 20px;
+}
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.links ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.links ul li {
+  position: relative;
+}
+
+.links ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.links ul li a:hover {
+  color: #ff4d4f;
+}
+
+.links ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #ff4d4f;
+  transition: width 0.3s ease;
+}
+.links ul li a:hover::after {
+  width: 100%;
+}
+
+/* زر البرغر — مخفي في الديسكتوب */
+.menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+.menu-btn .bar {
+  display: block;
+  width: 26px;
+  height: 2px;
+  margin: 6px 0;
+  background: #333;
+}
+
+/* الموبايل */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 10px 14px;
+  }
+
+  .menu-btn {
+    display: inline-block;
+  }
+
+  /* اخفي الروابط افتراضيًا على الموبايل */
+  .links {
+    position: fixed;
+    top: 60px; /* أسفل النافبار */
+    left: 0;
+    right: 0;
+    background: #f7e2b4;
+    display: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  }
+  .links.open {
+    display: block;
+  }
+
+  .links ul {
+    flex-direction: column; /* عمودي */
+    gap: 16px;
+    padding: 16px;
+    align-items: center;
+  }
+
+  .links ul li a {
+    font-size: 16px;
+  }
+}

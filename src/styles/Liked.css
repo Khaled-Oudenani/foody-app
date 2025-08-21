@@ -1,0 +1,33 @@
+.favorite-meals {
+  margin-top: 100px;
+  padding: 20px;
+  text-align: center;
+}
+
+.favorite-meals .title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ff4d6d;
+  font-weight: bold;
+}
+
+.favorite-meals .empty {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .favorite-meals {
+    margin-top: 140px;
+  }
+}
